@@ -50,14 +50,14 @@
         <button class="btn" id="proBtn">Оформить Pro Подписку (100 ⭐)</button>
     </div>
 
-    <script>
+  <script>
         const tg = window.Telegram.WebApp;
         tg.ready();
         tg.expand();
 
         document.getElementById('proBtn').addEventListener('click', () => {
-            // Передаємо сигнал "buy_pro" назад у чат з ботом
-            tg.sendData("buy_pro");
+            // Сюди вставляється код, який спрацьовує при кліку на кнопку
+            window.location.href = "https://t.me/shortifyai_test_bot?start=pro";
         });
     </script>
 </body>
