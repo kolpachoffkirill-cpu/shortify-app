@@ -24,25 +24,13 @@
             width: 100%;
             max-width: 400px;
         }
-        .btn {
-            background-color: var(--tg-theme-button-color, #2481cc);
-            color: var(--tg-theme-button-text-color, #ffffff);
-            border: none;
-            padding: 14px 24px;
-            border-radius: 12px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            width: 100%;
-            margin-top: 20px;
-        }
     </style>
 </head>
 <body>
     <div class="container">
         <h2>🎬 ShortifyAI Dashboard</h2>
         <p>Загрузите ваше длинное видео, чтобы обрезать его в формат 9:16 и наложить автоматические субтитры.</p>
-        <button class="btn" id="proBtn">Оформить Pro Подписку (100 ⭐)</button>
+        <p style="color: gray; font-size: 14px; margin-top: 20px;">Нажмите кнопку внизу экрана, чтобы оформить Pro подписку.</p>
     </div>
 
     <script>
@@ -50,8 +38,12 @@
         tg.ready();
         tg.expand();
 
-        document.getElementById('proBtn').addEventListener('click', () => {
-            // Відкриваємо чат з ботом і передаємо команду для оплати
+        // Налаштовуємо і показуємо офіційну головну кнопку Telegram внизу екрана
+        tg.MainButton.text = "Оформить Pro (100 ⭐)";
+        tg.MainButton.show();
+
+        // При натисканні на офіційну кнопку перенаправляємо на команду бота
+        tg.MainButton.onClick(() => {
             window.location.href = "https://t.me/shortifyai_test_bot?start=pro";
         });
     </script>
