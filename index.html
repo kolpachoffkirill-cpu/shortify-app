@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShortifyAI Mini App</title>
-    <!-- Підключаем скрипт Telegram Web Apps API -->
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <style>
         body {
@@ -36,10 +35,6 @@
             cursor: pointer;
             width: 100%;
             margin-top: 20px;
-            transition: opacity 0.2s;
-        }
-        .btn:active {
-            opacity: 0.8;
         }
     </style>
 </head>
@@ -50,13 +45,13 @@
         <button class="btn" id="proBtn">Оформить Pro Подписку (100 ⭐)</button>
     </div>
 
-  <script>
+    <script>
         const tg = window.Telegram.WebApp;
         tg.ready();
         tg.expand();
 
         document.getElementById('proBtn').addEventListener('click', () => {
-            // Сюди вставляється код, який спрацьовує при кліку на кнопку
+            // Відкриваємо чат з ботом і передаємо команду для оплати
             window.location.href = "https://t.me/shortifyai_test_bot?start=pro";
         });
     </script>
