@@ -50,16 +50,15 @@
         <button class="btn" id="proBtn">Оформить Pro Подписку (100 ⭐)</button>
     </div>
 
-    <script>
-        const tg = window.Telegram.WebApp;
-        tg.ready();
-        tg.expand();
+<script>
+    const tg = window.Telegram.WebApp;
+    tg.ready();
+    tg.expand();
 
-        document.getElementById('proBtn').addEventListener('click', () => {
-            // Закрываем Mini App и отправляем команду /pro в чат
-            tg.sendData("buy_pro");
-            tg.close();
-        });
-    </script>
+    document.getElementById('proBtn').addEventListener('click', () => {
+        // Передаємо сигнал "buy_pro" назад у чат з ботом і закриваємо міні-додаток
+        tg.sendData("buy_pro");
+    });
+</script>
 </body>
 </html>
